@@ -1,0 +1,6 @@
+{
+  "name": "Cineva - Google Play",
+  "description": "Aproveite milhões de novidades em apps, jogos e muito mais para Android no Google Play. Baixe o Cineva oficial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

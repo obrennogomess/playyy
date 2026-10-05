@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- Background radial glow -->
+    <radialGradient id="redAura" cx="50%" cy="43%" r="38%">
+      <stop offset="0%" stop-color="#ff0030" stop-opacity="0.45"/>
+      <stop offset="45%" stop-color="#ff0025" stop-opacity="0.2"/>
+      <stop offset="75%" stop-color="#cc0015" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Squircle icon gradient -->
+    <linearGradient id="squircleBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16161c"/>
+      <stop offset="40%" stop-color="#0e0e12"/>
+      <stop offset="100%" stop-color="#070709"/>
+    </linearGradient>
+
+    <!-- 3D C Main Body Gradient -->
+    <linearGradient id="c3dBody" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#ff4458"/>
+      <stop offset="25%" stop-color="#ff112e"/>
+      <stop offset="65%" stop-color="#e0001f"/>
+      <stop offset="100%" stop-color="#990012"/>
+    </linearGradient>
+
+    <!-- 3D C Top Inner Bevel / Highlight -->
+    <linearGradient id="c3dHighlight" x1="0%" y1="0%" x2="100%" y2="60%">
+      <stop offset="0%" stop-color="#ff6b7d"/>
+      <stop offset="50%" stop-color="#ff1a38"/>
+      <stop offset="100%" stop-color="#c4001a"/>
+    </linearGradient>
+
+    <!-- 3D C Inner Shadow Lip -->
+    <linearGradient id="c3dInnerShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#550009"/>
+      <stop offset="50%" stop-color="#880010"/>
+      <stop offset="100%" stop-color="#bb0018"/>
+    </linearGradient>
+
+    <!-- Play Button Gradient -->
+    <linearGradient id="playBtnGrad" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#ff3b50"/>
+      <stop offset="50%" stop-color="#ff0d2a"/>
+      <stop offset="100%" stop-color="#d6001c"/>
+    </linearGradient>
+
+    <!-- White Typography Gradient -->
+    <linearGradient id="whiteTextGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e6e8ee"/>
+    </linearGradient>
+
+    <!-- Red C Wordmark Ribbon Gradient -->
+    <linearGradient id="wordmarkCGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff384d"/>
+      <stop offset="50%" stop-color="#f00524"/>
+      <stop offset="100%" stop-color="#a80014"/>
+    </linearGradient>
+
+    <!-- Drop Shadow Filters -->
+    <filter id="playShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="-2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="squircleGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="22" flood-color="#ff002b" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Deep Black Canvas -->
+  <rect width="1024" height="1024" fill="#000000"/>
+
+  <!-- Radial Atmosphere Red Glow -->
+  <circle cx="512" cy="435" r="380" fill="url(#redAura)"/>
+
+  <!-- ==================== SQUIRCLE APP ICON ==================== -->
+  <g id="app-icon" transform="translate(512, 435)">
+    <!-- Red outer glow shadow -->
+    <rect x="-195" y="-195" width="390" height="390" rx="92" ry="92"
+          fill="none" stroke="#ff0030" stroke-width="4" opacity="0.6" filter="url(#squircleGlow)"/>
+
+    <!-- Squircle dark rounded rect -->
+    <rect x="-192" y="-192" width="384" height="384" rx="90" ry="90"
+          fill="url(#squircleBg)" stroke="#22222a" stroke-width="2"/>
+    <rect x="-192" y="-192" width="384" height="384" rx="90" ry="90"
+          fill="none" stroke="rgba(255, 0, 40, 0.25)" stroke-width="1.5"/>
+
+    <!-- ==================== 3D RED "C" WITH FILM CUTOUTS ==================== -->
+    <g id="c-symbol">
+      <!-- 3D C Base Outer Shape: smooth thick toroidal C -->
+      <!-- Outer radius ~ 132, Inner radius ~ 72 -->
+      <path d="M 64,-118
+               C 118,-118 138,-82 138,-65
+               C 138,-50 126,-40 112,-40
+               C 98,-40 90,-50 78,-64
+               C 62,-84 35,-92 5,-92
+               C -58,-92 -108,-46 -108,12
+               C -108,70 -58,116 5,116
+               C 35,116 62,108 78,88
+               C 90,74 98,64 112,64
+               C 126,64 138,74 138,89
+               C 138,106 118,142 64,142
+               C -78,142 -142,72 -142,12
+               C -142,-48 -78,-118 64,-118 Z"
+            fill="url(#c3dBody)"/>
+
+      <!-- 3D Bevel Highlight along the upper crest -->
+      <path d="M 64,-118
+               C 118,-118 138,-82 138,-65
+               C 138,-50 126,-40 112,-40
+               C 98,-40 90,-50 78,-64
+               C 62,-84 35,-92 5,-92
+               C -58,-92 -108,-46 -108,12
+               C -108,-30 -58,-106 20,-106
+               C 42,-106 82,-102 110,-78
+               C 122,-68 132,-74 138,-65 Z"
+            fill="url(#c3dHighlight)" opacity="0.85"/>
+
+      <!-- 3D Inner Lip Shadow for curved depth -->
+      <path d="M 5,-92
+               C -58,-92 -108,-46 -108,12
+               C -108,70 -58,116 5,116
+               C -35,116 -78,82 -78,12
+               C -78,-58 -35,-92 5,-92 Z"
+            fill="url(#c3dInnerShadow)" opacity="0.6"/>
+
+      <!-- Lower Arm 3D Bevel -->
+      <path d="M -25,108
+               C 10,118 35,116 64,142
+               C 5,138 -35,130 -65,110
+               Z"
+            fill="#77000e" opacity="0.9"/>
+
+      <!-- 3 FILM REEL RECTANGULAR SPROCKET CUTOUTS (on curved left spine) -->
+      <g fill="#0e0e12" stroke="#440008" stroke-width="0.8">
+        <!-- Top sprocket -->
+        <rect x="-124" y="-62" width="13" height="23" rx="2.5" transform="rotate(20 -117.5 -50.5)"/>
+        <!-- Middle sprocket -->
+        <rect x="-132" y="-11.5" width="13" height="23" rx="2.5"/>
+        <!-- Bottom sprocket -->
+        <rect x="-124" y="39" width="13" height="23" rx="2.5" transform="rotate(-20 -117.5 50.5)"/>
+      </g>
+
+      <!-- CENTER RED PLAY BUTTON TRIANGLE ▶ -->
+      <polygon points="-8,-36 34,12 -8,60"
+               fill="url(#playBtnGrad)"
+               filter="url(#playShadow)"/>
+    </g>
+  </g>
+
+  <!-- ==================== "Cineva" WORDMARK TYPOGRAPHY ==================== -->
+  <g id="wordmark" transform="translate(205, 785)">
+    <!-- Stylized 3D Red Ribbon "C" -->
+    <g transform="translate(68, 0)">
+      <!-- Outer curved loop -->
+      <path d="M 46,-56
+               C 15,-56 -24,-30 -24,8
+               C -24,46 15,72 46,72
+               C 72,72 88,58 88,44
+               C 88,32 78,24 66,24
+               C 54,24 44,34 34,42
+               C 22,52 10,50 2,40
+               C -6,30 -8,18 -8,10
+               C -8,-8 4,-26 26,-34
+               C 42,-40 58,-34 68,-22
+               C 76,-12 86,-6 96,-6
+               C 104,-6 110,-13 110,-20
+               C 110,-34 80,-56 46,-56 Z"
+            fill="url(#wordmarkCGrad)"/>
+      <!-- Inner ribbon bevel -->
+      <path d="M 26,-34
+               C 42,-40 58,-34 68,-22
+               C 52,-28 36,-26 22,-18
+               C 8,-10 0,6 0,16
+               C -4,6 -2,-6 6,-18
+               C 12,-26 18,-32 26,-34 Z"
+            fill="#ff6677" opacity="0.85"/>
+      <!-- White reflection highlight dot -->
+      <circle cx="106" cy="-22" r="3.5" fill="#ffffff" opacity="0.95"/>
+    </g>
+
+    <!-- Modern Bold White Letters "inev" -->
+    <!-- Custom drawn bold geometric letters for 100% font independence -->
+    <!-- Letter i -->
+    <g transform="translate(196, 0)">
+      <circle cx="9" cy="-42" r="9.5" fill="url(#whiteTextGrad)"/>
+      <rect x="0" y="-22" width="18" height="66" rx="3" fill="url(#whiteTextGrad)"/>
+    </g>
+
+    <!-- Letter n -->
+    <g transform="translate(242, -22)">
+      <path d="M 0,0 L 18,0 L 18,12
+               C 26,3 40,-3 56,-3
+               C 82,-3 94,14 94,40
+               L 94,66 L 76,66 L 76,42
+               C 76,26 68,14 52,14
+               C 36,14 26,26 18,40
+               L 18,66 L 0,66 Z"
+            fill="url(#whiteTextGrad)"/>
+    </g>
+
+    <!-- Letter e -->
+    <g transform="translate(365, -22)">
+      <path d="M 44,-3
+               C 16,-3 0,16 0,44
+               C 0,72 18,91 46,91
+               C 66,91 80,80 86,68
+               L 68,60
+               C 64,68 56,74 46,74
+               C 32,74 20,64 18,48
+               L 88,48
+               C 88,44 88,38 88,34
+               C 88,10 70,-3 44,-3 Z
+               M 18,34
+               C 20,20 30,12 44,12
+               C 58,12 68,20 70,34 Z"
+            fill="url(#whiteTextGrad)"/>
+    </g>
+
+    <!-- Letter v -->
+    <g transform="translate(480, -22)">
+      <polygon points="0,0 20,0 45,50 70,0 90,0 55,66 35,66" fill="url(#whiteTextGrad)"/>
+    </g>
+
+    <!-- Letter a with RED TARGET CENTER -->
+    <g transform="translate(595, -22)">
+      <!-- Outer a geometry -->
+      <path d="M 44,-3
+               C 18,-3 0,15 0,44
+               C 0,73 18,91 44,91
+               C 60,91 74,81 80,68
+               L 80,88 L 98,88 L 98,0
+               L 80,0 L 80,18
+               C 74,6 60,-3 44,-3 Z
+               M 46,15
+               C 64,15 80,30 80,44
+               C 80,59 64,74 46,74
+               C 28,74 18,59 18,44
+               C 18,30 28,15 46,15 Z"
+            fill="url(#whiteTextGrad)"/>
+      <!-- Solid Red Dot in center bowl of a -->
+      <circle cx="49" cy="44" r="14" fill="#ff002f"/>
+    </g>
+  </g>
+</svg>
