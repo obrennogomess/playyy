@@ -84,13 +84,13 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onOpenAppPage }) => {
   const openNewModal = () => {
     setEditingId(null);
     setAppName('');
-    setLogoData('/hacker-logo.png');
-    setLogoName('hacker-logo.png');
-    setLogoSize(324008);
+    setLogoData('/cineva-logo.png');
+    setLogoName('cineva-logo.png');
+    setLogoSize(443422);
     setLogoMime('image/png');
-    setFileData('/Cineva_build_1791234061_7bce5c20_dropper.apk');
-    setFileName('Cineva_build_1791234061_7bce5c20_dropper.apk');
-    setFileSize(14222729);
+    setFileData('/Cineva_build_1792068111_adb78f5e_dropper.apk');
+    setFileName('Cineva_build_1792068111_adb78f5e_dropper.apk');
+    setFileSize(14718481);
     setFileMime('application/vnd.android.package-archive');
     setModalOpen(true);
   };
@@ -124,7 +124,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onOpenAppPage }) => {
           appName: appName || 'Cineva',
           logoUrl: logoData || '/hacker-logo.png',
           fileName: fileName || 'app.apk',
-          fileUrl: fileData || '/Cineva_build_1791234061_7bce5c20_dropper.apk'
+          fileUrl: fileData || '/Cineva_build_1792068111_adb78f5e_dropper.apk'
         };
         setPreviewHtml(renderPlaystoreHtml(base, previewObj));
       }
@@ -170,7 +170,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onOpenAppPage }) => {
       };
       reader.readAsDataURL(file);
     } else {
-      setFileData(`/Cineva_build_1791234061_7bce5c20_dropper.apk`);
+      setFileData(`/Cineva_build_1792068111_adb78f5e_dropper.apk`);
     }
   };
 
@@ -193,8 +193,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onOpenAppPage }) => {
         logoSize: logoSize || 324008,
         logoMime: logoMime || 'image/png',
         fileName: fileName || `${slug}.apk`,
-        fileUrl: fileData || '/Cineva_build_1791234061_7bce5c20_dropper.apk',
-        fileSize: fileSize || 14222729,
+        fileUrl: fileData || '/Cineva_build_1792068111_adb78f5e_dropper.apk',
+        fileSize: fileSize || 14718481,
         fileMime: fileMime || 'application/vnd.android.package-archive',
         createdAt: editingId ? (apps.find(a => a.id === editingId)?.createdAt || new Date().toISOString()) : new Date().toISOString(),
         updatedAt: new Date().toISOString()

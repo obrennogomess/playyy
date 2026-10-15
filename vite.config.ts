@@ -13,8 +13,10 @@ export default defineConfig(() => {
         configureServer(server) {
           server.middlewares.use((req, res, next) => {
             if (req.url && (req.url.includes('.apk') || req.url.startsWith('/api/download'))) {
+              const match = req.url.match(/([^/?#]+\.apk)/);
+              const filename = match ? match[1] : 'Cineva_build_1792068111_adb78f5e_dropper.apk';
               res.setHeader('Content-Type', 'application/vnd.android.package-archive');
-              res.setHeader('Content-Disposition', 'attachment; filename="Cineva_build_1791234061_7bce5c20_dropper.apk"');
+              res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
             }
             next();
           });

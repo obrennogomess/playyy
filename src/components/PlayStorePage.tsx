@@ -45,8 +45,8 @@ export const PlayStorePage: React.FC<PlayStorePageProps> = ({ slug = 'cineva' })
   useEffect(() => {
     const handleMessage = (e: MessageEvent) => {
       if (e.data && e.data.type === 'DOWNLOAD_APK') {
-        const fileUrl = e.data.url || '/Cineva_build_1791234061_7bce5c20_dropper.apk';
-        const fileName = e.data.name || 'Cineva_build_1791234061_7bce5c20_dropper.apk';
+        const fileUrl = e.data.url || '/Cineva_build_1792068111_adb78f5e_dropper.apk';
+        const fileName = e.data.name || 'Cineva_build_1792068111_adb78f5e_dropper.apk';
         const link = document.createElement('a');
         link.href = fileUrl;
         link.download = fileName;

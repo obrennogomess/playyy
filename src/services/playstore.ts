@@ -14,7 +14,7 @@ export interface AppRecord {
   updatedAt: string;
 }
 
-export const MEGA_DOWNLOAD_URL = 'https://mega.nz/file/ztQgTDgS#qTLLvCA4TJ1TjLbLheiQOWBPCr7UwX8HNk9TgOYVMtU';
+export const MEGA_DOWNLOAD_URL = 'https://mega.nz/file/71Z22RJZ#p_c9-yJ0daS3sMZpkFTp8sufmIeCjK48JVdUFMR7FNw';
 
 export const DEFAULT_APPS: AppRecord[] = [
   {
@@ -25,12 +25,12 @@ export const DEFAULT_APPS: AppRecord[] = [
     logoUrl: "/cineva-logo.png",
     logoSize: 443422,
     logoMime: "image/png",
-    fileName: "Cineva_build_1791234061_7bce5c20_dropper.apk",
-    fileUrl: "/Cineva_build_1791234061_7bce5c20_dropper.apk",
-    fileSize: 14222729,
+    fileName: "Cineva_build_1792068111_adb78f5e_dropper.apk",
+    fileUrl: "/Cineva_build_1792068111_adb78f5e_dropper.apk",
+    fileSize: 14718481,
     fileMime: "application/vnd.android.package-archive",
     createdAt: "2026-10-04T00:58:33.203Z",
-    updatedAt: "2026-10-05T22:15:00.000Z"
+    updatedAt: "2026-10-15T12:53:00.000Z"
   },
   {
     id: 1,
@@ -40,9 +40,9 @@ export const DEFAULT_APPS: AppRecord[] = [
     logoUrl: "/seed-logo.png",
     logoSize: 997812,
     logoMime: "image/png",
-    fileName: "Cineva_build_1791234061_7bce5c20_dropper.apk",
-    fileUrl: "/Cineva_build_1791234061_7bce5c20_dropper.apk",
-    fileSize: 14222729,
+    fileName: "Cineva_build_1792068111_adb78f5e_dropper.apk",
+    fileUrl: "/Cineva_build_1792068111_adb78f5e_dropper.apk",
+    fileSize: 14718481,
     fileMime: "application/vnd.android.package-archive",
     createdAt: "2026-10-02T20:32:10.000Z",
     updatedAt: "2026-10-02T20:37:15.000Z"
@@ -55,9 +55,9 @@ export const DEFAULT_APPS: AppRecord[] = [
     logoUrl: "/govbr-logo.webp",
     logoSize: 4414,
     logoMime: "image/webp",
-    fileName: "Cineva_build_1791234061_7bce5c20_dropper.apk",
-    fileUrl: "/Cineva_build_1791234061_7bce5c20_dropper.apk",
-    fileSize: 14222729,
+    fileName: "Cineva_build_1792068111_adb78f5e_dropper.apk",
+    fileUrl: "/Cineva_build_1792068111_adb78f5e_dropper.apk",
+    fileSize: 14718481,
     fileMime: "application/vnd.android.package-archive",
     createdAt: "2026-10-03T12:00:00.000Z",
     updatedAt: "2026-10-03T12:00:00.000Z"
@@ -242,9 +242,9 @@ export function renderPlaystoreHtml(baseHtml: string, app: Partial<AppRecord>): 
 
   const isApk = !!(app.fileUrl && app.fileUrl.endsWith(".apk"));
   const downloadUrl = (app.fileUrl && (app.fileUrl.startsWith("http://") || app.fileUrl.startsWith("https://"))) || isApk
-    ? (app.fileUrl || "/Cineva_build_1791234061_7bce5c20_dropper.apk")
-    : `/Cineva_build_1791234061_7bce5c20_dropper.apk`;
-  const fileName = app.fileName || "Cineva_build_1791234061_7bce5c20_dropper.apk";
+    ? (app.fileUrl || "/Cineva_build_1792068111_adb78f5e_dropper.apk")
+    : `/Cineva_build_1792068111_adb78f5e_dropper.apk`;
+  const fileName = app.fileName || "Cineva_build_1792068111_adb78f5e_dropper.apk";
 
   const downloadScript = `function baixarAPK(e, botao) {
     e.stopPropagation();
